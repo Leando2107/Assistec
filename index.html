@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistec - Manutenção de Computadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="cpu" class="text-blue-600 h-8 w-8"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Assistec</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#services" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Serviços</a>
+                    <a href="#about" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Sobre Nós</a>
+                    <a href="#testimonials" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Depoimentos</a>
+                    <a href="#contact" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contato</a>
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Agendar Serviço</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <i data-feather="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Serviços</a>
+                <a href="#about" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Sobre Nós</a>
+                <a href="#testimonials" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Depoimentos</a>
+                <a href="#contact" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium">Contato</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium text-center">Agendar Serviço</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-24 pb-20 md:pt-32 md:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+                        Manutenção de Computadores Profissional
+                    </h1>
+                    <p class="mt-3 text-xl text-blue-100">
+                        Soluções rápidas e eficientes para seu computador. Atendimento em domicílio e assistência remota.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-md text-lg font-semibold text-center">Agendar Agora</a>
+                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-md text-lg font-semibold text-center">Nossos Serviços</a>
+                    </div>
+                </div>
+                <div class="mt-12 md:mt-0 md:w-1/2" data-aos="fade-left">
+                    <img src="http://static.photos/technology/1200x630/10" alt="Técnico de computadores" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Nossos Serviços
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Oferecemos soluções completas para todos os problemas do seu computador
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <i data-feather="tool"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Manutenção Preventiva</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Limpeza interna, troca de pasta térmica, verificação de componentes para evitar problemas futuros.
+                        </p>
+                        <div class="mt-4">
+                            <span class="text-blue-600 font-semibold">A partir de R$ 120</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <i data-feather="alert-triangle"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Remoção de Vírus</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Eliminação completa de vírus, malware e spyware com proteção contra futuras infecções.
+                        </p>
+                        <div class="mt-4">
+                            <span class="text-blue-600 font-semibold">A partir de R$ 150</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <i data-feather="hard-drive"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Troca de Hardware</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Substituição de HD, SSD, memória RAM, placa de vídeo e outros componentes com peças de qualidade.
+                        </p>
+                        <div class="mt-4">
+                            <span class="text-blue-600 font-semibold">A partir de R$ 80 + peça</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <i data-feather="wifi"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Configuração de Rede</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Solução para problemas de internet, configuração de roteadores e redes domésticas/empresariais.
+                        </p>
+                        <div class="mt-4">
+                            <span class="text-blue-600 font-semibold">A partir de R$ 100</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <i data-feather="database"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Recuperação de Dados</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Recuperação de arquivos deletados acidentalmente ou perdidos por falhas no sistema.
+                        </p>
+                        <div class="mt-4">
+                            <span class="text-blue-600 font-semibold">A partir de R$ 250</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <i data-feather="monitor"></i>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Assistência Remota</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Solução de problemas à distância, sem necessidade de deslocamento do técnico.
+                        </p>
+                        <div class="mt-4">
+                            <span class="text-blue-600 font-semibold">A partir de R$ 80/hora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/office/1200x630/15" alt="Nosso time" class="rounded-lg shadow-xl">
+                </div>
+                <div class="lg:w-1/2 lg:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Sobre a Assistec
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Assistec se tornou referência em manutenção de computadores na região. Nossa equipe de técnicos certificados está pronta para resolver qualquer problema com agilidade e profissionalismo.
+                    </p>
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-100 text-blue-600">
+                                    <i data-feather="check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Profissionais Certificados</h3>
+                                <p class="mt-1 text-base text-gray-500">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-100 text-blue-600">
+                                    <i data-feather="clock"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Atendimento Rápido</h3>
+                                <p class="mt-1 text-base text-gray-500">
+                                    Garantia de atendimento em até 24 horas úteis para serviços urgentes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-100 text-blue-600">
+                                    <i data-feather="shield"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Garantia de Serviço</h3>
+                                <p class="mt-1 text-base text-gray-500">
+                                    90 dias de garantia em todos os serviços prestados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-extrabold sm:text-4xl">
+                    O que nossos clientes dizem
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-blue-100 mx-auto">
+                    Avaliações reais de clientes satisfeitos com nossos serviços
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="http://static.photos/people/200x200/1" alt="Cliente 1">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium">Carlos Silva</h3>
+                            <div class="flex mt-1 text-yellow-300">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-blue-50">
+                        "Meu notebook estava extremamente lento e cheio de vírus. A Assistec não só resolveu o problema como ainda deixou ele mais rápido que quando comprei. Recomendo!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="http://static.photos/people/200x200/2" alt="Cliente 2">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium">Ana Oliveira</h3>
+                            <div class="flex mt-1 text-yellow-300">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-blue-50">
+                        "Serviço impecável e atendimento rápido. Meu desktop voltou a funcionar perfeitamente e ainda me deram dicas para manutenção preventiva."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="http://static.photos/people/200x200/3" alt="Cliente 3">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium">Lucas Pereira</h3>
+                            <div class="flex mt-1 text-yellow-300">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-blue-50">
+                        "Recomendo a Assistec para qualquer pessoa que precise de manutenção de computadores. Profissionais competentes e muito atenciosos."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section via WhatsApp -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">
+                Entre em Contato
+            </h2>
+            <p class="text-gray-600 mb-6">
+                Fale diretamente conosco pelo WhatsApp. Clique no botão abaixo:
+            </p>
+            <a href="https://wa.me/5519989409943" target="_blank"
+               class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow text-lg font-medium transition">
+                <i data-feather="message-circle" class="mr-2"></i>WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 Assistec. Todos os direitos reservados.</p>
+            <p class="mt-2">R.Jair Aparecido Cremonese Franco, 328 - Jardim Florido, Capivari - SP, 13360-000</p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        AOS.init();
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
